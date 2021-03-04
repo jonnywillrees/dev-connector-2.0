@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable */
+
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Posts from "./components/Posts";
+import Users from "./components/Users";
+import "./scss/custom.scss";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Navbar onClick={(current) => setCurrentPage(current)} />
+      {currentPage === 1 ? <Home /> : null}
+      {currentPage === 2 ? <Posts /> : null}
+      {currentPage === 3 ? <Users /> : null}
+    </React.Fragment>
   );
 }
 

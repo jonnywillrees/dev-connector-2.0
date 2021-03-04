@@ -1,0 +1,72 @@
+// ************** //
+// Custom Utilities
+.page-padding {
+  padding: 8rem 0;
+}
+
+.posts-card {
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+// Card component styles
+.card {
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 2rem;
+  height: 100%;
+
+  &__image {
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+  &__text {
+    grid-area: text;
+    margin: 25px;
+
+    p {
+      color: grey;
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    .date {
+      color: #e96333;
+      font-size: 13px;
+    }
+    h2 {
+      margin-top: 0px;
+      font-size: 28px;
+    }
+  }
+  &__stats {
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: #e96333;
+
+    .stat {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      padding: 10px;
+    }
+  }
+
+  &__container {
+    height: 300px;
+  }
+}

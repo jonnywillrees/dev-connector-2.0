@@ -1,0 +1,24 @@
+.navbar {
+  &-brand {
+    cursor: pointer;
+
+    &:hover i,
+    &:hover span {
+      color: #da7049;
+    }
+  }
+
+  .nav-link {
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    &:last-of-type {
+      margin-left: 3rem;
+    }
+  }
+
+  &__title {
+    font-size: clamp(2rem, calc(2vw + 1rem), 3rem);
+    font-weight: bold;
+  }
+}

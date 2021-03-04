@@ -1,0 +1,18 @@
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination {
+  margin: 3rem 0;
+  .page-link {
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.page-link.active {
+  color: #e96333;
+}
